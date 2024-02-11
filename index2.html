@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <title>Смена картинок</title>
+    <style>
+        .fig {
+         text-align: center;
+        }
+       </style>
+</head>
+<body>
+    <p class="fig"><img id="image" src="we1.jpg"  onClick="imgsrc();" width="176" height="176" ></p>
+    <p class="fig" id="demo"></p>
+    <p class="fig" ><input type="text" name="userName" value={$demo} readonly/></p>
+    <script language="javascript">
+        var i=0;
+        var image=document.getElementById("image");
+        
+        var imgs=new Array('acvar1.jpg','acvar2.jpg','acvar3.jpg','acvar4.jpg','acvar5.jpg');
+        var tex=new Array('Алый хинакридон', 'Майская зеленая','Аурелит','Серая Пейна','Воронежская черная')
+        function imgsrc() {
+            i++;
+            var n=imgs.length;
+            i=i%n;
+            image.src=imgs[i];
+            document.getElementById("demo").innerHTML = tex[i];
+            
+        }
+    </script>
+</body>
+</html

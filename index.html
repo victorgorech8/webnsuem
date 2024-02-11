@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script>
+            var isHappy=true;
+            function changeImage(img){
+                var imgname=isHappy ? "we1.jpg" : "we2.jpg";
+                isHappy=!isHappy;
+                img.scr=imgname;
+            }
+        </script>
+    </head>
+    <body>
+        <img id="image"  scr="we2.jpg" onclick="changeImage(this);"  width="256"/>
+    </body>
+</html>
